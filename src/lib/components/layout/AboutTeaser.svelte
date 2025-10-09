@@ -21,9 +21,9 @@ A minimalist teaser for the about page.
 
 	// Data
 	const teamMember: TeamMember = {
-		name: "Alex Morgan",
-		role: "Founder & CEO",
-		image: "https://www.unc.mn/image-placeholder.svg"
+		name: "Founder & CEO",
+		role: "Ulysses",
+		image: "/generated/image-environmental-documentary-portrait-of-a-.webp"
 	};
 </script>
 
@@ -32,23 +32,23 @@ A minimalist teaser for the about page.
 		<div class="relative mx-auto grid max-w-2xl place-items-center gap-16">
 			<ScrollText
 				class="text-title1 text-center"
-				text={`"We're building the future of digital experiences, crafting innovative solutions that transform how people interact with technology in their everyday lives"`}
+				text={`"I watched a Navy diver spend six hours surveying a quarter-mile of seabed that our system now maps in twenty minutes. That's when I knew we weren't just building robots—we were giving humanity the tools to finally steward seventy percent of our planet."`}
 			/>
 
 			<!-- Team Member & CTA Section -->
-			<div class="grid items-center gap-8 dark:border-gray-800">
-				<div class="flex items-center justify-start gap-4">
-					<img
-						src={teamMember.image}
-						alt={teamMember.name}
-						class="size-12 rounded-full object-cover"
-					/>
-					<div>
-						<div class="text-callout">{teamMember.name}</div>
-						<div class="text-caption text-emphasis-low">{teamMember.role}</div>
-					</div>
-					<Button href="/about" variant="secondary" size="sm" class="ml-8">Read more</Button>
+			<div class="flex flex-col items-center gap-6 md:flex-row md:gap-8">
+				<img
+					src={teamMember.image}
+					alt={teamMember.name}
+					class="size-16 rounded-full object-cover border-2 border-gray-200"
+				/>
+				<div class="text-center md:text-left">
+					<div class="text-callout font-medium">{teamMember.name}</div>
+					<div class="text-caption text-muted-foreground">{teamMember.role}</div>
 				</div>
+				<Button href="/about" variant="secondary" size="sm" class="md:ml-auto">
+					Read our story
+				</Button>
 			</div>
 		</div>
 	</div>
